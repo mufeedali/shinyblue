@@ -33,15 +33,12 @@ modules:
         - JetBrainsMono
 
   - type: rpm-ostree
-    repos:
-      - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
     install:
       - bat
       - code
       - eza
       - fish
       - micro
-      - ptyxis
       - rclone
       - restic
       - ripgrep
@@ -49,18 +46,10 @@ modules:
       - rocm-opencl
       - rsms-inter-fonts
       - sshfs
-      # -- Ptyxis overrides --
-      - vte291
-      - vte-profile
-      # ----------------------
       - wl-clipboard
     remove:
       - htop
       - nvtop
-      # -- Ptyxis overrides --
-      - vte291
-      - vte-profile
-      # ----------------------
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -72,6 +61,7 @@ modules:
       install:
         - app.drey.Dialect # Yeah...
         - dev.mufeed.Wordbook # You know exactly what I'm doing...
+      # I want to add Ptyxis here but BlueBuild doesn't support multiple flatpak repos yet :(
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
