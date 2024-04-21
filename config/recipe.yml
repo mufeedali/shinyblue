@@ -55,8 +55,6 @@ modules:
       # ----------------------
       - wl-clipboard
     remove:
-      - apr
-      - apr-util
       - htop
       - nvtop
       # -- Ptyxis overrides --
