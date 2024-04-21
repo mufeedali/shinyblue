@@ -61,7 +61,13 @@ modules:
       install:
         - app.drey.Dialect # Yeah...
         - dev.mufeed.Wordbook # You know exactly what I'm doing...
-      # I want to add Ptyxis here but BlueBuild doesn't support multiple flatpak repos yet :(
+      # TODO: Add Ptyxis here once BlueBuild supports multiple flatpak repos
+      # Refer to https://github.com/blue-build/modules/issues/146
+
+  - type: bling
+    install:
+      - ublue-update # Automatic updates using topgrade.
+      - dconf-update-service # Runs `dconf update` on every boot.
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
