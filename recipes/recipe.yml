@@ -57,10 +57,23 @@ modules:
       # If no repo information is specified, Flathub will be used by default
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
       repo-name: flathub
-      repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      repo-title: "Flathub" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
+        # --- The Essentials ---
         - app.drey.Dialect # Yeah...
         - dev.mufeed.Wordbook # You know exactly what I'm doing...
+        - io.missioncenter.MissionCenter # Task manager-esque app
+        # ----- Cool Apps ------
+        - io.github.celluloid_player.Celluloid # mpv-based media player
+        - org.gnome.gitlab.cheywood.Buffer # Ephemeral text editor
+        # ----- For Gaming -----
+        - com.valvesoftware.Steam # Steam
+        - page.kramo.Cartridges # Game Launcher
+        - com.heroicgameslauncher.hgl # Amazon + Epic + GOG Games Launcher
+        # ----- Development ----
+        - ca.desrt.dconf-editor
+        - org.flatpak.Builder # Required for VS Code flatpak extension among others
+        - com.github.tchx84.Flatseal # Flatpak Permissions Manager
       # TODO: Add Ptyxis here once BlueBuild supports multiple flatpak repos
       # Refer to https://github.com/blue-build/modules/issues/146
 
