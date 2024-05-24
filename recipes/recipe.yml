@@ -74,8 +74,7 @@ modules:
         - ca.desrt.dconf-editor
         - org.flatpak.Builder # Required for VS Code flatpak extension among others
         - com.github.tchx84.Flatseal # Flatpak Permissions Manager
-      # TODO: Add Ptyxis here once BlueBuild supports multiple flatpak repos
-      # Refer to https://github.com/blue-build/modules/issues/146
+        - app.devsuite.Ptyxis # Terminal app with support for containers and other stuff
 
   - type: bling
     install:
