@@ -47,6 +47,7 @@ modules:
       - rsms-inter-fonts
       - sshfs
       - wl-clipboard
+      - meson
     remove:
       - htop
       - nvtop
