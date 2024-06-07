@@ -48,6 +48,7 @@ modules:
       - sshfs
       - wl-clipboard
       - meson
+      - https://proton.me/download/PassDesktop/linux/x64/ProtonPass.rpm
     remove:
       - htop
       - nvtop
