@@ -57,6 +57,12 @@ modules:
       - waydroid-selinux
       - xapps # I don't use any of them
       - python3-xapps-overrides
+      - cockpit-bridge
+      - cockpit-navigator
+      - cockpit-podman
+      - cockpit-selinux
+      - cockpit-storaged
+      - cockpit-system
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
