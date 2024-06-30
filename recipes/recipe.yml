@@ -52,6 +52,11 @@ modules:
       - nvtop
       - webapp-manager
       - clapper # I use celluloid
+      - gnome-shell-extension-hanabi # I hate when stuff moves too much
+      - waydroid # I have a phone
+      - waydroid-selinux
+      - xapps # I don't use any of them
+      - python3-xapps-overrides
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
