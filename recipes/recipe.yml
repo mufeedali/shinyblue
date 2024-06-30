@@ -64,6 +64,10 @@ modules:
       - cockpit-storaged
       - cockpit-system
       - cockpit-networkmanager
+      - input-remapper
+      - joycond
+      - openrazer-kmod-common
+      - powertop
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
