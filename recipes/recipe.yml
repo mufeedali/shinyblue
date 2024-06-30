@@ -5,7 +5,7 @@ description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/bazzite-gnome
-image-version: 40 # latest is also supported if you want new updates ASAP
+image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -50,6 +50,7 @@ modules:
       - meson
     remove:
       - nvtop
+      - webapp-manager
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -63,21 +64,34 @@ modules:
         - app.drey.Dialect # Yeah...
         - dev.mufeed.Wordbook # You know exactly what I'm doing...
         - io.missioncenter.MissionCenter # Task manager-esque app
+        - org.onlyoffice.desktopeditors # OnlyOffice
         # ----- Cool Apps ------
         - io.github.celluloid_player.Celluloid # mpv-based media player
         - org.gnome.gitlab.cheywood.Buffer # Ephemeral text editor
         # ----- For Gaming -----
         - page.kramo.Cartridges # Game Launcher
+        - com.heroicgameslauncher.hgl # Epic, Amazon and GOG Launcher
+        - com.usebottles.bottles # Wine UI
+        - com.github.mtkennerly.ludusavi # Save file backup tool
+        - io.itch.itch # Itch Launcher
+        # ----- Emulators ----
+        - info.cemu.Cemu # Wii U
+        - app.xemu.xemu # XBox
+        - net.kuribo64.melonDS # DS
+        - net.pcsx2.PCSX2 # PS2
+        - net.rpcs3.RPCS3 # PS3
+        - org.DolphinEmu.dolphin-emu # Wii/GameCube
+        - org.ppsspp.PPSSPP # PSP
+        - org.ryujinx.Ryujinx # Switch
         # ----- Development ----
         - ca.desrt.dconf-editor
         - org.flatpak.Builder # Required for VS Code flatpak extension among others
         - com.github.tchx84.Flatseal # Flatpak Permissions Manager
-        - app.devsuite.Ptyxis # Terminal app with support for containers and other stuff
-
-  - type: bling
-    install:
-      - ublue-update # Automatic updates using topgrade.
-      - dconf-update-service # Runs `dconf update` on every boot.
+        # ----- Desktop -----
+        - com.mattjakeman.ExtensionManager
+        - it.mijorus.gearlever
+      remove:
+        - io.github.dvlv.boxbuddyrs
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
