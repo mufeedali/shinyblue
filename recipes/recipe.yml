@@ -49,7 +49,6 @@ modules:
       - wl-clipboard
       - meson
     remove:
-      - htop
       - nvtop
 
   - type: default-flatpaks
