@@ -4,7 +4,7 @@ name: shinyblue
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/bazzite
 image-version: 40 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -35,10 +35,10 @@ modules:
   - type: rpm-ostree
     install:
       - bat
-      - code
+      - code # VS Code
       - eza
       - fish
-      - micro
+      - micro # Cool terminal text editor
       - rclone
       - restic
       - ripgrep
@@ -48,7 +48,6 @@ modules:
       - sshfs
       - wl-clipboard
       - meson
-      - https://proton.me/download/PassDesktop/linux/x64/ProtonPass.rpm
     remove:
       - htop
       - nvtop
